@@ -51,7 +51,7 @@ void pc2transform_icp(float roll, float pitch, float yaw, float x, float y, floa
 
 
 	Eigen::Matrix3f rot;
-	rot = Eigen::AngleAxisf(roll*(-1), Eigen::Vector3f::UnitX()) * Eigen::AngleAxisf(pitch*(-1), Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(yaw, Eigen::Vector3f::UnitZ());
+	rot = Eigen::AngleAxisf(roll*(1), Eigen::Vector3f::UnitX()) * Eigen::AngleAxisf(pitch*(1), Eigen::Vector3f::UnitY()) * Eigen::AngleAxisf(yaw, Eigen::Vector3f::UnitZ());
 
 	Eigen::Translation3f init_translation (x, y, z);
 
